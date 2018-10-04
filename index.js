@@ -8,4 +8,6 @@ function loadIssue() {
   
   let template = Handlebars.compile(document.getElementByID("issue-template").innerHTML);
   let result = template(issue);
+  
+  document.getElementsByTagName("main")[0].innerHTML += result;
 }
