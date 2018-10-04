@@ -2,12 +2,11 @@ function loadIssue() {
   var issue = {
     state: "closed",
     number: 5,
-    created_at: "2018-03-31 16:23:13 UTC",
+    created_at: "2016-03-31 16:23:13 UTC",
     body: "Instructions say GET /team and POST /newteam. Rspec wants GET/newteam and POST/team."
   }
-  
-  var template = Handlebars.compile(document.getElementByID("issue-template").innerHTML);
+ 
+  var template = Handlebars.compile(document.getElementById("issue-template").innerHTML);
   var result = template(issue);
-  
   document.getElementsByTagName("main")[0].innerHTML += result;
 }
